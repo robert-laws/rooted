@@ -1,0 +1,17 @@
+{
+  "name": "rooted",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "process:images": "node scripts/process-images.mjs",
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "build:fresh": "npm run process:images && vite build",
+    "preview": "vite preview --host 127.0.0.1"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5",
+    "vite": "^7.3.0"
+  }
+}
