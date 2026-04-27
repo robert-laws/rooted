@@ -151,8 +151,17 @@ document.querySelector("#app").innerHTML = `
   </footer>
 `;
 
+const siteHeader = document.querySelector(".site-header");
+const updateHeaderTone = () => {
+  siteHeader?.classList.toggle("is-scrolled", window.scrollY > 80);
+};
+
+updateHeaderTone();
+window.addEventListener("scroll", updateHeaderTone, { passive: true });
+
 const scrollToHash = () => {
   document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" });
+  updateHeaderTone();
 };
 
 if (window.location.hash) {

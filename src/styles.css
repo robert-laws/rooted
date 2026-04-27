@@ -66,6 +66,20 @@ a {
   justify-content: space-between;
   padding: 18px clamp(20px, 4vw, 58px);
   color: var(--color-bg);
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.site-header.is-scrolled {
+  color: var(--color-primary);
+  background: rgba(244, 239, 230, 0.96);
+  box-shadow:
+    0 1px 0 rgba(47, 74, 52, 0.12),
+    0 12px 30px rgba(47, 74, 52, 0.06);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
 }
 
 .brand-mark {
@@ -83,6 +97,12 @@ a {
   height: 32px;
   object-fit: contain;
   filter: brightness(0) invert(1);
+  transition: filter 180ms ease;
+}
+
+.site-header.is-scrolled .brand-mark img {
+  filter: brightness(0) saturate(100%) invert(22%) sepia(15%) saturate(933%) hue-rotate(79deg) brightness(94%)
+    contrast(90%);
 }
 
 .site-nav {
