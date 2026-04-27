@@ -1,5 +1,6 @@
 import "./styles.css";
 import { imageManifest } from "./imageManifest.js";
+import rootedLogo from "../assets/design/rooted-logo.png";
 
 const base = import.meta.env.BASE_URL;
 
@@ -39,7 +40,10 @@ function picture(group, id, className, sizes = "100vw", loading = "lazy") {
 
 document.querySelector("#app").innerHTML = `
   <header class="site-header" aria-label="Primary">
-    <a class="brand-mark" href="#top" aria-label="Rooted home">Rooted</a>
+    <a class="brand-mark" href="#top" aria-label="Rooted home">
+      <img src="${rootedLogo}" alt="" aria-hidden="true">
+      <span>Rooted</span>
+    </a>
     <nav class="site-nav" aria-label="Sections">
       <a href="#land">Land</a>
       <a href="#harvest">Harvest</a>
@@ -52,11 +56,12 @@ document.querySelector("#app").innerHTML = `
       ${picture("landscape", "terrace-workers-wide-01", "hero-media", "100vw", "eager")}
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">
-        <p class="kicker">Land shaped by hands. Hands shaped by land.</p>
+        <img class="hero-logo" src="${rootedLogo}" alt="" aria-hidden="true">
         <h1 id="hero-title">Rooted</h1>
+        <p class="kicker">Earth. Food. Workers.</p>
         <p class="hero-copy">
-          For generations, communities have shaped the land and the land has shaped them.
-          Tending the terraces, sharing the harvest — this is what it means to belong.
+          Honoring the land and the hands that feed us. Building a future grounded
+          in dignity, nourishment, and care for all.
         </p>
       </div>
     </section>
@@ -64,9 +69,8 @@ document.querySelector("#app").innerHTML = `
     <section class="intro-section" aria-label="Rooted introduction">
       <div class="intro-rule"></div>
       <p>
-        Rooted follows the quiet intelligence of cultivated hillsides: water held in place,
-        pathways learned by memory, and harvests made possible by people who return season
-        after season.
+        Rooted celebrates the connection between soil and soul. Through stories,
+        resources, and partnerships, we support a more just and sustainable food future.
       </p>
     </section>
 
@@ -75,9 +79,10 @@ document.querySelector("#app").innerHTML = `
         <p class="eyebrow">The Land</p>
         <h2 id="land-title">Terraces make time visible.</h2>
         <p>
-          Each level is a small act of care. Soil is held. Water slows. A hillside becomes
-          a living archive of weather, labor, inheritance, and renewal.
+          Sustainable practices restore thriving soil and strong communities. Each level is
+          a small act of care: soil is held, water slows, and a hillside becomes a living archive.
         </p>
+        <a class="text-link" href="#harvest">Explore stories <span aria-hidden="true">→</span></a>
       </div>
       <div class="land-composition">
         ${picture("landscape", "terrace-mist-01", "mist-image", "(min-width: 900px) 58vw, 100vw")}
@@ -121,13 +126,15 @@ document.querySelector("#app").innerHTML = `
           Belonging is not abstract here. It is carried in baskets, planted in rows,
           exchanged at meals, and taught by watching someone older move through the field.
         </p>
+        <a class="button-link" href="#top">Return to the land <span aria-hidden="true">→</span></a>
       </div>
     </section>
 
     <section class="closing-section" aria-labelledby="closing-title">
       ${picture("detail", "terrace-workers-close-01", "closing-media", "100vw")}
       <div class="closing-copy">
-        <p class="eyebrow">Rooted</p>
+        <img class="closing-logo" src="${rootedLogo}" alt="" aria-hidden="true">
+        <p class="eyebrow">Rooted in land. Driven by people.</p>
         <h2 id="closing-title">To tend a place is to be claimed by it.</h2>
         <p>
           The terrace holds the harvest. The harvest gathers the community. The community
@@ -138,8 +145,9 @@ document.querySelector("#app").innerHTML = `
   </main>
 
   <footer class="site-footer">
-    <p>Rooted</p>
-    <p>Land, harvest, and belonging.</p>
+    <p>Rooted in land. Driven by people.</p>
+    <img src="${rootedLogo}" alt="" aria-hidden="true">
+    <p>Thank you for helping us grow a better future.</p>
   </footer>
 `;
 
