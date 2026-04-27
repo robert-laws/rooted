@@ -218,6 +218,12 @@ p {
   padding: clamp(74px, 10vw, 146px) clamp(22px, 6vw, 96px);
 }
 
+.land-section,
+.harvest-section,
+.belonging-section {
+  scroll-margin-top: 96px;
+}
+
 .section-copy {
   max-width: 560px;
 }
@@ -255,7 +261,7 @@ p {
 }
 
 .harvest-section {
-  padding: clamp(78px, 11vw, 156px) clamp(22px, 6vw, 96px);
+  padding: clamp(78px, 11vw, 156px) clamp(22px, 6vw, 96px) clamp(84px, 9vw, 128px);
   background: #eee5d5;
 }
 
@@ -278,27 +284,44 @@ p {
 .harvest-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(18px, 2.2vw, 32px);
+  gap: clamp(24px, 3vw, 44px);
+  align-items: start;
 }
 
 figure {
   margin: 0;
 }
 
+.harvest-grid figure {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 22px;
+  min-width: 0;
+}
+
 .harvest-image {
+  display: block;
+  width: 100%;
   aspect-ratio: 0.82;
   overflow: hidden;
   background: var(--color-info);
-  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   box-shadow: 0 16px 38px rgba(47, 74, 52, 0.08);
 }
 
+.harvest-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 figcaption {
-  margin-top: 14px;
+  max-width: 18rem;
+  margin: 0;
   color: var(--color-text-muted);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  font-weight: 500;
+  line-height: 1.42;
 }
 
 .belonging-section {
@@ -441,8 +464,7 @@ figcaption {
 
   .intro-section,
   .story-section,
-  .harvest-heading,
-  .harvest-grid {
+  .harvest-heading {
     grid-template-columns: 1fr;
   }
 
@@ -468,11 +490,12 @@ figcaption {
   }
 
   .harvest-grid {
-    gap: 32px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px 24px;
   }
 
   .harvest-image {
-    aspect-ratio: 1;
+    aspect-ratio: 0.86;
   }
 }
 
@@ -510,6 +533,31 @@ figcaption {
   .intro-section,
   .harvest-section {
     padding-inline: 18px;
+  }
+
+  .land-section,
+  .harvest-section,
+  .belonging-section {
+    scroll-margin-top: 82px;
+  }
+
+  .harvest-grid {
+    grid-template-columns: 1fr;
+    gap: 38px;
+  }
+
+  .harvest-grid figure {
+    gap: 14px;
+  }
+
+  .harvest-image {
+    aspect-ratio: 1;
+  }
+
+  figcaption {
+    max-width: 100%;
+    font-size: 1.05rem;
+    line-height: 1.45;
   }
 
   .intro-section p {

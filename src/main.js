@@ -151,8 +151,12 @@ document.querySelector("#app").innerHTML = `
   </footer>
 `;
 
+const scrollToHash = () => {
+  document.querySelector(window.location.hash)?.scrollIntoView({ block: "start" });
+};
+
 if (window.location.hash) {
-  window.requestAnimationFrame(() => {
-    document.querySelector(window.location.hash)?.scrollIntoView();
-  });
+  window.requestAnimationFrame(scrollToHash);
+  window.addEventListener("load", () => window.requestAnimationFrame(scrollToHash), { once: true });
+  window.setTimeout(scrollToHash, 250);
 }
