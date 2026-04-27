@@ -1,0 +1,20 @@
+{
+  "name": "Rooted",
+  "short_name": "Rooted",
+  "description": "An editorial story about land, harvest, terraces, and belonging.",
+  "icons": [
+    {
+      "src": "icons/rooted-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/rooted-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#2f4a34",
+  "background_color": "#f4efe6",
+  "display": "standalone"
+}
