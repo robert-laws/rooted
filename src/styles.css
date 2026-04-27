@@ -432,6 +432,9 @@ figcaption {
 
 .text-link {
   color: var(--color-accent);
+}
+
+.text-link .link-label {
   text-decoration: underline;
   text-underline-offset: 6px;
 }

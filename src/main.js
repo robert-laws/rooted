@@ -82,7 +82,7 @@ document.querySelector("#app").innerHTML = `
           Sustainable practices restore thriving soil and strong communities. Each level is
           a small act of care: soil is held, water slows, and a hillside becomes a living archive.
         </p>
-        <a class="text-link" href="#harvest">Explore stories <span aria-hidden="true">→</span></a>
+        <a class="text-link" href="#harvest"><span class="link-label">Explore stories</span> <span aria-hidden="true">→</span></a>
       </div>
       <div class="land-composition">
         ${picture("landscape", "terrace-mist-01", "mist-image", "(min-width: 900px) 58vw, 100vw")}
