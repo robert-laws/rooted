@@ -54,6 +54,9 @@ document.querySelector("#app").innerHTML = `
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       ${picture("landscape", "terrace-workers-wide-01", "hero-media", "100vw", "eager")}
+      <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="${base}video/rooted-hero.mp4" type="video/mp4">
+      </video>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="hero-content">
         <img class="hero-logo" src="${rootedLogo}" alt="" aria-hidden="true">
